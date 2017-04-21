@@ -6,18 +6,18 @@ void main()
 {    
 	int **a = NULL;
 	int *b = NULL;
-    int i,j;  
-    int AH, BH, L;  
+        int i,j;  
+        int AH, BH, L;  
 	
-	printf("ÇëÊäÈëBµÄÐÐÊý\n");
+	printf("è¯·è¾“å…¥Bçš„è¡Œæ•°\n");
 	scanf("%d", &BH);
-    printf("ÇëÊäÈëAÐÐÊý\n");  
-    scanf("%d",&AH);  
-    printf("ÇëÊäÈëÁÐÊý\n");  
-    scanf("%d",&L);
+        printf("è¯·è¾“å…¥Aè¡Œæ•°\n");  
+        scanf("%d",&AH);  
+        printf("è¯·è¾“å…¥åˆ—æ•°\n");  
+        scanf("%d",&L);
 	
 	b = (int *)malloc(sizeof(int) * BH);
-    a = (int**)malloc(sizeof(int*) * AH);
+        a = (int**)malloc(sizeof(int*) * AH);
 
 	if(NULL == a)
 	{
@@ -27,13 +27,13 @@ void main()
 	{
 		exit(1);
 	}
-	//¸³Öµ
+	//èµ‹å€¼
 	for (i=0; i<BH; i++)
 	{
-		printf("ÇëÊäÈëµÚ%dÐÐ1ÁÐµÄÊýÖµ\n");
+		printf("è¯·è¾“å…¥ç¬¬%dè¡Œ1åˆ—çš„æ•°å€¼\n");
 		scanf("%d", &b[i]);
 	}
-    for(i=0;i<AH;i++)
+        for(i=0;i<AH;i++)
 	{
 		a[i]=(int*)malloc(sizeof(int) * L);
 		if(NULL == a[i])
@@ -41,17 +41,17 @@ void main()
 			exit(1);
 		}
 	}
-    for(i=0;i<AH;i++) 
+        for(i=0;i<AH;i++) 
 	{
 		for(j=0;j<L;j++) 
 		{
-			printf("ÇëÊäÈë%dÐÐ%dÁÐµÄÊý\n", i, j);
+			printf("è¯·è¾“å…¥%dè¡Œ%dåˆ—çš„æ•°\n", i, j);
 			scanf("%d", &a[i][j]);
 		}
 	}
 
 
-	//ÊÍ·Å
+	//é‡Šæ”¾
 	for(i=0;i<AH;i++)
 	{
 		free(a[i]);
